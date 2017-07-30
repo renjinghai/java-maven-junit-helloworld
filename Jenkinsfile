@@ -6,17 +6,19 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-               echo 'dev'
+               echo 'compile'
                 sh 'mvn compile'
             }
         }
         stage('Test') {
             steps {
+                echo 'test'
                 sh 'mvn test'
             }
         }
         stage('Verify') {
             steps {
+                echo 'verify'
                 sh 'mvn verify'
             }
         }
